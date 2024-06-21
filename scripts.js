@@ -1,7 +1,7 @@
 // 图片链接复制
 document.querySelectorAll('.gallery .card').forEach(card => {
     card.addEventListener('click', () => {
-        const imageUrl = card.querySelector('img').src;
+        const imageUrl = card.querySelector('img').alt;
         navigator.clipboard.writeText(imageUrl).then(() => {
             alert('图片链接已复制: ' + imageUrl);
         });
